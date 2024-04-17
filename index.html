@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+   <p><h2>Welcome <b id="name"></b> Azure to html page</h2></p> 
+    <script>
+        (async function() {
+            let {text} = await(await fetch("api/Getmessage")).json();
+            document.querySelector('#name').textContent = text;
+        }())
+    </script>
+</body>
+</html>
